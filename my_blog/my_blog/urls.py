@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
+from article.views import home, detail, test
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^$', home, name='home'),
+    url(r'^(?P<post_id>\d+)/$', detail, name='detail'),
+    url(r'^test/$', test, name='test'),
+    url(r'^favicon.ico$', RedirectView.as_view(url=r'static/favicon.ico')),
 ]
