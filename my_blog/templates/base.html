@@ -19,10 +19,19 @@
         <div class="sidebar pure-u-1 pure-u-md-1-4">
             <div class="header">
                 <h1 class="brand-title">Impulse Blog</h1>
-                <h2 class="brand-tagline">Touring by Pure</h2>
+                <h2 class="brand-tagline">Powered by Pure</h2>
     
                 <nav class="nav">
                     <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="button-success pure-button" href="/">主页</a>
+                        </li>                       
+                        <li class="nav-item">
+                            <a class="button-success pure-button" href="/">归档</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="button-error pure-button" href="/">专题</a>
+                        </li>
                         <li class="nav-item">
                             <a class="pure-button" href="http://purecss.io">Pure</a>
                         </li>
@@ -39,20 +48,26 @@
                 {% block content %}
                 
                 {% endblock content %}
-                <div class="footer">
-                    <div class="pure-menu, pure-menu-horizontal, pure-menu-open">
-                        <ul>
-                            <li><a href="http://127.0.0.1/about/">About This Site</a></li>
-                            <li><a href="http://127.0.0.1/admin/">Site Admin</a></li>
-                            <li><a href="https://github.com/FremanZhang/">Github</a></li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="footer">
+                <div class="pure-menu, pure-menu-horizontal">
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="http://127.0.0.1/about/" class="pure-menu-heading pure-menu-link">About This Site</a></li>
+                        <li class="pure-menu-item"><a href="http://127.0.0.1:8000/admin/" class="pure-menu-link">Site Admin</a></li>
+                        <li class="pure-menu-item"><a href="https://github.com/FremanZhang/" class="pure-menu-link">Github</a></li>
+                    </ul>
+                </div>
+                <div class="pure-menu pure-menu-horizontal">
+                    <a href="#" class="pure-menu-heading pure-menu-link">AUTHOR</a>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item"><a href="#" class="pure-menu-link">News</a></li>
+                        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Support</a></li>
+                        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-
     </div>
-
 
 
 
