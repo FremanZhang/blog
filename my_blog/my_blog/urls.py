@@ -16,13 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from article.views import home, detail, test
+from article.views import home, detail, archive, about, search_tag, blog_search
 from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', home, name='home'),
     url(r'^(?P<post_id>\d+)/$', detail, name='detail'),
-    url(r'^test/$', test, name='test'),
+    url(r'^tag(?P<tag>\w+)/$', search_tag, name="search_tag"),
+    url(r'^archive/$', archive, name='archive'),
+    url(r'^about/$', about, name='about'),
+    url(r'^search/$', blog_search, name='search'),
     url(r'^favicon.ico$', RedirectView.as_view(url=r'static/favicon.ico')),
 ]

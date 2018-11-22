@@ -1,5 +1,3 @@
-from django.db import models
-
 # Create your models here.
 from django.db import models
 
@@ -7,7 +5,7 @@ from django.db import models
 class Article(models.Model):
     title = models.CharField(max_length = 128)
     category = models.CharField(max_length = 50, blank = True)
-    date = models.DateField(auto_now_add = True)
+    date = models.DateTimeField(auto_now_add = True)
     content = models.TextField(blank = True, null = True)
 
     def __str__(self):

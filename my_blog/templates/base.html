@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static "pure/pure-release-1.0.0/pure-min.css" %}">
     <link rel="stylesheet" href="{% static "pure/pure-release-1.0.0/grids-responsive-min.css" %}">
     <link rel="stylesheet" href="{% static "pure/css/layouts/blog.css" %}">
+
 </head>
 <body>
     
@@ -27,7 +28,7 @@
                             <a class="button-success pure-button" href="/">主页</a>
                         </li>                       
                         <li class="nav-item">
-                            <a class="button-success pure-button" href="/">归档</a>
+                            <a class="button-success pure-button" href="{% url "archive" %}">归档</a>
                         </li>
                         <li class="nav-item">
                             <a class="button-error pure-button" href="/">专题</a>
@@ -50,10 +51,14 @@
                 {% endblock content %}
             </div>
             <div class="footer">
+                <form class="pure-form" action="/search/" method="get">
+                    <input type="text" class="pure-input-rounded" name="search" placeholder="Type word(s) of the title...">
+                    <button type="submit" class="pure-button">Search</button>
+                </form>
                 <div class="pure-menu, pure-menu-horizontal">
                     <ul class="pure-menu-list">
-                        <li class="pure-menu-item"><a href="http://127.0.0.1/about/" class="pure-menu-heading pure-menu-link">About This Site</a></li>
-                        <li class="pure-menu-item"><a href="http://127.0.0.1:8000/admin/" class="pure-menu-link">Site Admin</a></li>
+                        <li class="pure-menu-item"><a href="http://127.0.0.1:8000/about/" class="pure-menu-heading pure-menu-link">About This Site</a></li>
+                        <li class="pure-menu-item"><a href="http://127.0.0.1:8000/admin/">Site Admin</a></li>
                         <li class="pure-menu-item"><a href="https://github.com/FremanZhang/" class="pure-menu-link">Github</a></li>
                     </ul>
                 </div>
