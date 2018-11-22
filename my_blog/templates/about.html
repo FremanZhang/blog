@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1 style="color: #cccccc">In the progress of reading ThreeBody...</h1>
+<p style="color: #cc3300"><strong>{{ current_time }}</strong></p>
+<img src="{% static "audio-wave.png" %}" alt="My image"/>
+
+<form class="pure-form">
+    <input type="text" class="pure-input-rounded">
+    <button type="submit" class="pure-button">Search</button>
+</form>
+
+{% endblock content %}
